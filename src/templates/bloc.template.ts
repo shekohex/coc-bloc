@@ -79,7 +79,7 @@ part '${snakeCaseBlocName}_state.dart';
 part '${snakeCaseBlocName}_bloc.freezed.dart';
 
 class ${pascalCaseBlocName}Bloc extends Bloc<${blocEvent}, ${blocState}> {
-  ${pascalCaseBlocName}Bloc() : super(_Initial());
+  ${pascalCaseBlocName}Bloc() : super(const ${blocState}.initial());
 
   @override
   Stream<${blocState}> mapEventToState(

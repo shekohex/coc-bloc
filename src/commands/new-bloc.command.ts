@@ -60,7 +60,7 @@ async function generateBlocCode(
   targetDirectory: string,
   type: BlocType
 ) {
-  const blocDirectoryPath = `${targetDirectory}/bloc`;
+  const blocDirectoryPath = `${targetDirectory}/${blocName}`;
   if (!existsSync(blocDirectoryPath)) {
     await createDirectory(blocDirectoryPath);
   }
