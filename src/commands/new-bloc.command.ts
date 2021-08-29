@@ -89,7 +89,7 @@ function createBlocEventTemplate(
   type: BlocType
 ) {
   const snakeCaseBlocName = changeCase.snakeCase(blocName.toLowerCase());
-  const targetPath = `${targetDirectory}/bloc/${snakeCaseBlocName}_event.dart`;
+  const targetPath = `${targetDirectory}/${blocName}/${snakeCaseBlocName}_event.dart`;
   if (existsSync(targetPath)) {
     throw Error(`${snakeCaseBlocName}_event.dart already exists`);
   }
@@ -115,7 +115,7 @@ function createBlocStateTemplate(
   type: BlocType
 ) {
   const snakeCaseBlocName = changeCase.snakeCase(blocName.toLowerCase());
-  const targetPath = `${targetDirectory}/bloc/${snakeCaseBlocName}_state.dart`;
+  const targetPath = `${targetDirectory}/${blocName}/${snakeCaseBlocName}_state.dart`;
   if (existsSync(targetPath)) {
     throw Error(`${snakeCaseBlocName}_state.dart already exists`);
   }
@@ -141,7 +141,7 @@ function createBlocTemplate(
   type: BlocType
 ) {
   const snakeCaseBlocName = changeCase.snakeCase(blocName.toLowerCase());
-  const targetPath = `${targetDirectory}/bloc/${snakeCaseBlocName}_bloc.dart`;
+  const targetPath = `${targetDirectory}/${blocName}/${snakeCaseBlocName}_bloc.dart`;
   if (existsSync(targetPath)) {
     throw Error(`${snakeCaseBlocName}_bloc.dart already exists`);
   }
